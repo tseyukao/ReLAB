@@ -114,13 +114,14 @@ body {
   font-weight: 800;
 }
 
-.infoone,
-.price {
-  margin-bottom: 15px;
+.infotwo {
+  margin-top: 15px;
+  margin-bottom: 48px;
 }
 
-.infotwo {
-  margin-bottom: 48px;
+.infoone,
+.price {
+  margin-top: 15px;
 }
 
 .info1-first,
@@ -304,25 +305,28 @@ input::-webkit-inner-spin-button {
 }
 
 .input {
-  border: 0;
-  background-color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  background: linear-gradient(to right, #fff 50%, #d9d9d9 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   color: #2d2d2d;
   border-radius: 30px;
   cursor: pointer;
-  width: 90%;
-  height: 34px;
-  font-size: 16px;
+  width: 92%;
+  height: 38px;
+  text-align: center;
+  font-size: 14px;
   font-family: "GenWanMin JP", "Times New Roman", serif;
   letter-spacing: 2px;
-  margin-top: 25px;
-  padding-bottom: 9px;
-  padding-left: 26%;
+  margin-top: 15px;
+  transition: background-position 0.3s ease-in, color 0.3s ease-in,
+    border-color 0.3s ease-in;
 }
 
 .input:hover {
-  color: #8c9792;
-  background-color: #fff;
-  border: 1px #8c9792 solid;
+  background-position: left bottom;
+  border-color: #9db2b3;
+  color: #9db2b3;
 }
 
 .input:active {
