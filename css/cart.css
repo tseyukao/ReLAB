@@ -56,7 +56,7 @@ p {
   background-color: #d9d9d9;
   width: 85%;
   margin: 0 auto;
-  padding-left: 2%;
+  padding-left: 8.5%;
 }
 
 .gray-bar p {
@@ -68,7 +68,7 @@ p {
 }
 
 .bar1 {
-  margin-right: 58%;
+  margin-right: 62%;
 }
 
 .bar2 {
@@ -86,13 +86,31 @@ p {
   vertical-align: middle;
 }
 
-.shoplist1 {
+.shoplist1,
+.shoplist2,
+.shoplist3 {
   width: 84%;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: solid 1px #d9d9d9;
   padding-left: 2%;
+}
+
+.shoplist1 {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.shoplist2 {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.shoplist3 {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1s;
 }
 
 .shopimg img {
@@ -281,6 +299,9 @@ input::-webkit-inner-spin-button {
   margin-left: 74%;
   margin-top: 70px;
   margin-bottom: 150px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
 .sumbig {
@@ -305,28 +326,62 @@ input::-webkit-inner-spin-button {
 }
 
 .inputbtn {
-  border: 0;
-  background-color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  margin-top: 20px;
+  background: linear-gradient(to right, #fff 50%, #d9d9d9 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   color: #2d2d2d;
   border-radius: 30px;
   cursor: pointer;
   width: 75%;
-  height: 34px;
-  font-size: 15px;
+  height: 38px;
+  font-size: 14px;
   font-family: "GenWanMin JP", "Times New Roman", serif;
-  letter-spacing: 1px;
-  margin-top: 25px;
-  padding-bottom: 9px;
+  letter-spacing: 2px;
+  transition: background-position 0.3s ease-in, color 0.3s ease-in,
+    border-color 0.3s ease-in;
 }
 
 .inputbtn:hover {
-  color: #8c9792;
-  background-color: #fff;
-  border: 1px #8c9792 solid;
+  background-position: left bottom;
+  border-color: #9db2b3;
+  color: #9db2b3;
 }
 
-.inputbtnactive {
+.inputbtn:active {
   color: #8c9792;
   background-color: #8c9792;
   color: #fff;
+}
+
+.shoplist3 .shopimg .shop-left img {
+  width: 9%;
+  margin-right: 9%;
+}
+
+.shoplist3 .input-group1 {
+  margin-left: 0.5%;
+}
+
+.shoplist3 .checkbox {
+  margin-right: 6%;
+}
+
+.shoplist3 {
+  width: 84%;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-bottom: solid 1px #d9d9d9;
+  padding-left: 2%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* 开始和结束时完全透明 */
+  }
+  100% {
+    opacity: 1; /* 动画中间时完全不透明 */
+  }
 }
