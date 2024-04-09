@@ -427,11 +427,11 @@
       window.onload = function () {
         AOS.init();
       };
-
+    </script>
+    <script>
       document.querySelector(".circle").addEventListener("click", () => {
         document.dispatchEvent(new Event("yourCustomStartEvent"));
       });
-
       let slideIndex = 1;
       showSlides(slideIndex);
 
@@ -444,30 +444,25 @@
       }
 
       function showSlides(n) {
+        let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("circle");
-
-        if (!slides || slides.length === 0 || !dots || dots.length === 0) {
-          console.error("Slides or dots not found.");
-          return;
-        }
-
         if (n > slides.length) {
           slideIndex = 1;
         }
         if (n < 1) {
           slideIndex = slides.length;
         }
-
-        for (let i = 0; i < slides.length; i++) {
+        for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].classList.remove("active");
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
         }
-
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add("active");
+        AOS.refresh();
+
+        dots[slideIndex - 6].className += " active";
       }
 
       function changeSlide2(n) {
@@ -477,8 +472,10 @@
       function changeSlide(n) {
         showSlides((slideIndex = n));
       }
+    </script>
 
-      let slideIndex2 = 6;
+    <script>
+      let slideIndex2 = 6; // 設定初始索引為第二區域的第一張圖片
       showSlides2(slideIndex2);
 
       function plusSlides2(n) {
@@ -490,30 +487,25 @@
       }
 
       function showSlides2(n) {
+        let i;
         let slides = document.getElementsByClassName("mySlides2");
         let dots = document.getElementsByClassName("circle2");
-
-        if (!slides || slides.length === 0 || !dots || dots.length === 0) {
-          console.error("Slides or dots not found.");
-          return;
-        }
-
         if (n > slides.length + 5) {
           slideIndex2 = 6;
         }
         if (n < 6) {
           slideIndex2 = slides.length + 5;
         }
-
-        for (let i = 0; i < slides.length; i++) {
+        for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].classList.remove("active");
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
         }
-
         slides[slideIndex2 - 6].style.display = "block";
-        dots[slideIndex2 - 6].classList.add("active");
+        AOS.refresh();
+
+        dots[slideIndex2 - 6].className += " active";
       }
 
       function changeSlide2(n) {
