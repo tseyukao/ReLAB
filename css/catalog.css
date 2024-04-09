@@ -55,7 +55,7 @@ p {
 .page-content {
   width: 84%;
   margin: 0 auto;
-  padding-top: 5px;
+  padding-top: 100px;
 }
 
 #page1 {
@@ -63,7 +63,7 @@ p {
 }
 
 #page2 {
-  margin-bottom: 120px;
+  margin-bottom: 225px;
 }
 
 /* 左邊文字說明區域的樣式 */
@@ -160,8 +160,9 @@ p {
   text-align: center;
   background-image: url(../IMG/background_circle.png);
   background-repeat: no-repeat;
-  background-size: 53%;
-  background-position: 49% 0px;
+  background-size: 40%;
+  background-position: 50% 0px;
+  margin-right: 9%;
   /* opacity: 0; */
   /* animation: fadeIn 1200ms ease forwards; */
 }
@@ -179,7 +180,7 @@ p {
 }
 
 .mySlides img {
-  width: 65%;
+  width: 45%;
   margin-top: 55px;
   margin-left: 5.5%;
   animation: fadeIn 1s ease forwards, fadeIn 1s linear forwards;
@@ -195,14 +196,18 @@ p {
 }
 
 .button {
-  width: 4.5%;
+  width: 4%;
   display: inline-block;
   margin-top: 10px;
   background-image: url(../IMG/Line\ 10.png);
   background-repeat: no-repeat;
-  background-position: 50% 0px;
+  background-position: 21px 0px;
   background-size: 10%;
-  margin-left: 9%;
+}
+
+.mid-cir {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .circle,
@@ -212,7 +217,6 @@ p {
   border-radius: 50%;
   border: solid 5px #fff;
   display: inline-block;
-  margin-right: 5px;
   cursor: pointer;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -315,7 +319,7 @@ p {
 }
 
 .mySlides2 img {
-  width: 40%;
+  width: 30%;
   margin-top: 150px;
   margin-left: 17.5%;
   animation: fadeIn 1s ease forwards, fadeIn 1s linear forwards;
