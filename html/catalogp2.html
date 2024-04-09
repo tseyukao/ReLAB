@@ -48,7 +48,7 @@
           <div class="upper-content">
             <h1>ReLAB EXP.001</h1>
             <p>
-              ラベルのないペットボトルが、新たなお茶の世界をお届けします。ReLABのお茶は、味覚だけでなく視覚にも楽しみを提供することを目指しています。
+              ReLABは、茶道の精神に着想を得て、不要なものを取り除き、一杯のお茶が持つ純粋な本質を伝えたいと考えています。EXP.001は、様々な茶種が持つ文化的なイメージを活かし、ボトルの内側のデザインを工夫し、お茶を飲むだけでなく、お茶の色や香り、茶文化を楽しむことができるようにしています。一本一本のお茶を大切にし、心を込めてお届けします。
             </p>
           </div>
           <div class="dw-content">
@@ -242,7 +242,8 @@
           <div class="upper-content">
             <h1>ReLAB EXP.001</h1>
             <p>
-              ラベルのないペットボトルが、新たなお茶の世界をお届けします。ReLABのお茶は、味覚だけでなく視覚にも楽しみを提供することを目指しています。
+              明治20年代、静岡駅の駅弁屋が土瓶と小さな湯のみを販売。昭和30年代には便利なポリ容器が登場し、昭和の定番となったが、ペットボトル登場で消え去りました。<br />
+              ReLABは、この瓶詰めのお茶をリデザインし、懐かしい思い出と現代感覚のデザインを融合させることを目指しています。暖かい、懐かしい記憶を再び手にすることを可能にします。
             </p>
           </div>
           <div class="dw-content">
@@ -426,11 +427,11 @@
       window.onload = function () {
         AOS.init();
       };
-    </script>
-    <script>
+
       document.querySelector(".circle").addEventListener("click", () => {
         document.dispatchEvent(new Event("yourCustomStartEvent"));
       });
+
       let slideIndex = 1;
       showSlides(slideIndex);
 
@@ -443,25 +444,30 @@
       }
 
       function showSlides(n) {
-        let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("circle");
+
+        if (!slides || slides.length === 0 || !dots || dots.length === 0) {
+          console.error("Slides or dots not found.");
+          return;
+        }
+
         if (n > slides.length) {
           slideIndex = 1;
         }
         if (n < 1) {
           slideIndex = slides.length;
         }
-        for (i = 0; i < slides.length; i++) {
+
+        for (let i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active");
         }
-        slides[slideIndex - 1].style.display = "block";
-        AOS.refresh();
 
-        dots[slideIndex - 6].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
       }
 
       function changeSlide2(n) {
@@ -471,10 +477,8 @@
       function changeSlide(n) {
         showSlides((slideIndex = n));
       }
-    </script>
 
-    <script>
-      let slideIndex2 = 6; // 設定初始索引為第二區域的第一張圖片
+      let slideIndex2 = 6;
       showSlides2(slideIndex2);
 
       function plusSlides2(n) {
@@ -486,25 +490,30 @@
       }
 
       function showSlides2(n) {
-        let i;
         let slides = document.getElementsByClassName("mySlides2");
         let dots = document.getElementsByClassName("circle2");
+
+        if (!slides || slides.length === 0 || !dots || dots.length === 0) {
+          console.error("Slides or dots not found.");
+          return;
+        }
+
         if (n > slides.length + 5) {
           slideIndex2 = 6;
         }
         if (n < 6) {
           slideIndex2 = slides.length + 5;
         }
-        for (i = 0; i < slides.length; i++) {
+
+        for (let i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active");
         }
-        slides[slideIndex2 - 6].style.display = "block";
-        AOS.refresh();
 
-        dots[slideIndex2 - 6].className += " active";
+        slides[slideIndex2 - 6].style.display = "block";
+        dots[slideIndex2 - 6].classList.add("active");
       }
 
       function changeSlide2(n) {
