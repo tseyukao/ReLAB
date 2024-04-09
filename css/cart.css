@@ -296,7 +296,7 @@ input::-webkit-inner-spin-button {
 
 .sum {
   width: 20%;
-  margin-left: 74%;
+  margin-left: 80%;
   margin-top: 70px;
   margin-bottom: 150px;
   opacity: 0;
@@ -312,7 +312,7 @@ input::-webkit-inner-spin-button {
 }
 
 .line1 p {
-  width: 49%;
+  width: 36%;
   text-align: justify;
   font-size: 16px;
   display: inline-block;
@@ -334,7 +334,7 @@ input::-webkit-inner-spin-button {
   color: #2d2d2d;
   border-radius: 30px;
   cursor: pointer;
-  width: 75%;
+  width: 56%;
   height: 38px;
   font-size: 14px;
   font-family: "GenWanMin JP", "Times New Roman", serif;

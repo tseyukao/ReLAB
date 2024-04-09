@@ -67,9 +67,9 @@ p {
 
 /*about*/
 .aboutus-logo-container img {
-  width: 17%;
-  margin-left: 76.5%;
-  margin-bottom: 310px;
+  width: 15%;
+  margin-left: 78.5%;
+  margin-bottom: 235px;
   /* opacity: 0; */
   /* animation: rightIn 1s ease forwards, fadeIn 1s linear forwards; */
 }
@@ -98,8 +98,8 @@ p {
   margin: auto;
 }
 .about-us {
-  margin-top: 100px;
-  padding-bottom: 150px;
+  margin-top: 50px;
+  padding-bottom: 195px;
   border-bottom: 1px solid #9db2b3;
 }
 
@@ -148,7 +148,7 @@ p {
   vertical-align: bottom;
   width: 70%;
   line-height: 3.5;
-  height: 200px;
+  height: 270px;
   text-align: justify;
   font-weight: 300;
   /* opacity: 0; */

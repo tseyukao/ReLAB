@@ -22,14 +22,14 @@ body {
 
 .exp001,
 .exp002 {
-  margin-top: 100px;
   width: 84%;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .exp002 {
   margin-top: 180px;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 }
 
 body {
@@ -99,7 +99,7 @@ body {
 }
 
 .img-container img {
-  width: 44%;
+  width: 35%;
 }
 
 /*中間文字*/
@@ -191,7 +191,7 @@ body {
   width: 30%;
   display: inline-block;
   vertical-align: bottom;
-  padding-left: 10%;
+  padding-left: 6%;
 }
 
 label {
@@ -230,7 +230,8 @@ select {
   background-repeat: no-repeat;
   background-size: 10%;
   background-position: 97%;
-  width: 90%;
+  width: 270px;
+  height: 30px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4%;
@@ -285,7 +286,7 @@ input::-webkit-inner-spin-button {
   position: relative;
   height: 30px;
   text-align: center;
-  width: 71%;
+  width: 225px;
   display: inline-block;
   font-size: 13px;
   margin: 0 0 5px;
@@ -312,7 +313,7 @@ input::-webkit-inner-spin-button {
   color: #2d2d2d;
   border-radius: 30px;
   cursor: pointer;
-  width: 92%;
+  width: 270px;
   height: 38px;
   text-align: center;
   font-size: 14px;
@@ -371,7 +372,7 @@ input::-webkit-inner-spin-button {
 #tea-image4,
 #tea-image5 {
   margin-top: 55px;
-  margin-left: 5.5%;
+  margin-left: 17%;
   animation: fadeIn 1s ease forwards, fadeIn 1s linear forwards;
 }
 
@@ -389,9 +390,9 @@ input::-webkit-inner-spin-button {
 #tea2-image3,
 #tea2-image4,
 #tea2-image5 {
-  width: 60%;
+  width: 53%;
   margin-top: 55px;
-  margin-left: 5.5%;
+  margin-left: 9.5%;
   animation: fadeIn 1s ease forwards, fadeIn 1s linear forwards;
 }
 
