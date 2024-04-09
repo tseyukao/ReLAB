@@ -24,7 +24,7 @@ body {
 .exp002 {
   width: 84%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 55px;
 }
 
 .exp002 {
@@ -96,6 +96,7 @@ body {
   width: 28%;
   display: inline-block;
   vertical-align: bottom;
+  margin-left: 6%;
 }
 
 .img-container img {
@@ -104,7 +105,7 @@ body {
 
 /*中間文字*/
 .mid-container {
-  width: 35%;
+  width: 31%;
   display: inline-block;
   vertical-align: middle;
 }
